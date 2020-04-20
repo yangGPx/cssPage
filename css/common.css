@@ -1,0 +1,90 @@
+*{
+  margin: 0;padding: 0;box-sizing: border-box;color: #fff;font-size: 14px;
+}
+html,body{
+  width: 100%;height: 100%;
+}
+html{
+  background: linear-gradient(90deg, #136a8a, #267871);
+}
+body{
+  background: rgba(0,0,0,0.2);
+}
+.main{
+  padding: 10px;
+}
+
+.effect-title{
+  font-size: 30px;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.effect-content{
+  padding: 10px 0;
+}
+.c-button{
+  width: 200px;height: 90px;display: flex;justify-content: center;
+  align-items: center;background: linear-gradient(90deg, #f1f2b5,#135058);
+  border-radius: 15px;margin: 0 auto;cursor: pointer;margin-bottom: 10px;
+  position: relative;overflow: hidden;
+}
+.c-button.rubberBand-1:hover{
+  animation: rubberBand1 1s;
+}
+.c-button.rubberBand-2:hover{
+  animation: rubberBand2 1s;
+}
+@keyframes rubberBand1{
+  0%{
+    transform: scale(1, 1);
+  }
+  25%{
+    transform: scale(1, 0.75);
+  }
+  50%{
+    transform: scale(0.75, 1.25);
+  }
+  75%{
+    transform: scale(1.25, 0.75);
+  }
+  100%{
+    transform: scale(1, 1);
+  }
+}
+@keyframes rubberBand2{
+  0%{
+    transform: scale(1, 1);
+  }
+  35%{
+    transform: scale(1.25, 0.75);
+  }
+  45%{
+    transform: scale(.75, 1);
+  }
+  60%{
+    transform: scale(1.2, 0.8);
+  }
+  75%{
+    transform: scale(1.05, 0.95);
+  }
+  100%{
+    transform: scale(1, 1);
+  }
+}
+.ripple{
+  display: block;
+  background: rgba(255,255,255,0.4);
+  border-radius: 50%;
+  position: absolute;
+  animation: rippleChange 1s;
+  transform: translate(-50%, -50%);
+}
+@keyframes rippleChange{
+  from{
+    width: 0;height: 0;
+  }
+  to{
+    width: 500px;height: 500px;
+  }
+}
